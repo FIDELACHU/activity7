@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('robotic_kits', function (Blueprint $table) {
             $table->id();
+            $table->string('type');
             $table->timestamps();
         });
     }

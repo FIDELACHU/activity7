@@ -2,9 +2,15 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class RoboticKit extends Model
 {
-    //
+    use HasFactory;
+    protected $fillable = ['type'];
+
+    public function courses() {
+        return $this->hasMany(Course::class);
+    }
 }
